@@ -73,7 +73,7 @@ if uploaded_file:
             cv2.rectangle(img, (x, y), (x+w, y+h), color, 2)
             cv2.putText(img, gender.upper(), (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, color, 2)
 
-        st.markdown(f"<h3 style='color:{label_color};text-align:center;'>Predicted Gender: {gender.upper()}</h3>", unsafe_allow_html=True)
+        #st.markdown(f"<h3 style='color:{label_color};text-align:center;'>Predicted Gender: {gender.upper()}</h3>", unsafe_allow_html=True)
         st.image(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), caption="Detected Face", channels="RGB")
 
 st.markdown("---")
